@@ -1,0 +1,11 @@
+.snake{
+    height : 30px;
+    width:  40px;  
+}
+h1{
+   width :  10vw;
+   margin-left :45vw; 
+}
+canvas{
+    background-color: black;
+}
