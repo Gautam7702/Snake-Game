@@ -1,9 +1,9 @@
-const canvas  = document.getElementById('game_screen');
-const ctx = canvas.getContext('2d');
+
 let snake = [];
 var score =0;
 let foodX,foodY;
 let foodEaten=1;
+
 document.addEventListener("keydown",PressKey);
 function PressKey(e)
     {
@@ -159,8 +159,13 @@ function draw(){
     snake[0] = Object.assign({}, head);     
     drawSnake();    
 }
-
+const canvas  = document.getElementById('game_screen');
+const ctx = canvas.getContext('2d');
 function newgame(){
+    //console.log(speed);
+    snake = [];
+    score =0;
+    ctx.clearRect(0,0,500,600);
     const bit = {
         x :-10,
         y :10,
@@ -171,5 +176,4 @@ function newgame(){
     foodEaten = 1;
     move();
 }
-
 newgame();
